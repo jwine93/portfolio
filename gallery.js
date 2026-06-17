@@ -87,10 +87,16 @@
   }
 
   // Attach click handlers to all gallery thumbnails
+// Attach click handlers to all gallery thumbnails
   document.querySelectorAll('.gallery').forEach(function (gallery) {
     const thumbs = Array.from(gallery.querySelectorAll('.gallery__thumb'));
     thumbs.forEach(function (thumb, i) {
       thumb.addEventListener('click', function () {
+        const full = thumb.dataset.full || '';
+        if (/\.pdf$/i.test(full)) {
+          window.open(full, '_blank');
+          return;
+        }
         openLightbox(thumbs, i);
       });
       // Keyboard accessibility
@@ -99,6 +105,11 @@
       thumb.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
+          const full = thumb.dataset.full || '';
+          if (/\.pdf$/i.test(full)) {
+            window.open(full, '_blank');
+            return;
+          }
           openLightbox(thumbs, i);
         }
       });

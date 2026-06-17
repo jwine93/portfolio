@@ -416,6 +416,14 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Work / Gallery ----- */
 /* --------------------------------------- */
 
+.project-group {
+    margin-bottom: var(--gutter-medium);
+}
+
+.project-group:last-child {
+    margin-bottom: 0;
+}
+
 .work-section {
     padding: var(--gutter-huge) 0;
     border-bottom: var(--border-light);

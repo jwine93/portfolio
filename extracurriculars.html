@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/foggy_landscape.JPG" />
+  <title>Extracurriculars — Julia Wine</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <header class="header header--short" role="banner">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="work.html" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="cv.html" class="nav__link">CV</a></li>
+          <li class="nav__item"><a href="extracurriculars.html" class="nav__link nav__link--active">Extracurriculars</a></li>
+          <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="page-main">
+    <section class="work-section">
+      <div class="row">
+        <h2>Artwork</h2>
+        <p class="work-section__intro">
+          Linocut printmaking, collage, and illustration exploring nostalgia and the natural world.
+        </p>
+
+        <!--
+          INSTRUCTIONS: Add one .slide block per artwork image.
+          Set src to your image path, and write a caption in the <p>.
+          Add or remove slides as needed — the arrows will adjust automatically.
+        -->
+        <div class="slideshow" id="artwork-slideshow">
+
+          <div class="slide">
+            <img src="./images/dinos.jpeg" alt="Linocut print of the Dinos mascot" />
+            <p class="slide__caption">Linocut print of the Dinos mascot, George</p>
+          </div>
+
+          <div class="slide">
+            <img src="./images/huck_lino.jpg" alt="Linocut print of a house" />
+            <p class="slide__caption">Linocut print of a house in Williamsburg, VA</p>
+          </div>
+
+          <div class="slide">
+            <img src="./images/lyra_lino.JPG" alt="Linocut print of a cat" />
+            <p class="slide__caption">Linocut print of a napping cat</p>
+          </div>
+
+          <div class="slide">
+            <img src="./images/dylan_drawing.JPG" alt="Illustration of Bob Dylan" />
+            <p class="slide__caption">Pencil drawing of Bob Dylan</p>
+          </div>
+
+          <div class="slide">
+            <img src="./images/stockholm_drawing.jpeg" alt="Illustration of a city landscape from above" />
+            <p class="slide__caption">Plain air sketch of Stockholm from a viewpoint</p>
+          </div>
+
+          <!-- Add more slides here -->
+
+        </div>
+
+        <div class="slideshow__controls">
+          <button class="slideshow__btn" id="slide-prev" aria-label="Previous image">&#8592;</button>
+          <span class="slideshow__counter" id="slide-counter"></span>
+          <button class="slideshow__btn" id="slide-next" aria-label="Next image">&#8594;</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/juliawine" title="LinkedIn Profile">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+      <p>&copy; 2025 Julia Wine 
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+  <script src="./slideshow.js"></script>
+</body>
+</html>

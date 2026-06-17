@@ -295,7 +295,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__item:not(:last-child) {
-    margin-right: var(--gutter-medium);
+    margin-right: var(--gutter-small);
 }
 
 @media(max-width: 500px) {
@@ -315,34 +315,22 @@ body:not(.user-is-tabbing) a:focus {
 .nav__link {
     position: relative;
     display: inline-block;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     text-decoration: none;
-    color: inherit;
+    color: var(--white);
     transition: all .2s;
+    border: 1px solid var(--green);
+    border-radius: 4px;
 }
 
 .nav__link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 100%;
-    display: inline-block;
-    height: 1rem;
-    background: var(--white);
-    transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
+    display: none;
 }
 
 .nav__link:hover,
 .nav__link--active {
-    color: var(--pink);
-}
-
-.nav__link:hover::after,
-.nav__link--active::after {
-    right: 0;
-    height: 2px;
-    background: var(--pink);
+    background: var(--green);
+    color: var(--white);
 }
 
 /* --------------------------------------- */
@@ -483,6 +471,72 @@ body:not(.user-is-tabbing) a:focus {
 
 .gallery__thumb:hover .gallery__overlay {
     opacity: 1;
+}
+
+/* --------------------------------------- */
+/* ----- Slideshow ----- */
+/* --------------------------------------- */
+
+.slideshow {
+    position: relative;
+    max-width: var(--container-normal-width);
+    margin: var(--gutter-normal) auto 0;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.slide--active {
+    display: block;
+}
+
+.slide img {
+    max-height: 60vh;
+    margin: 0 auto;
+    display: block;
+    border: var(--border-light);
+}
+
+.slide__caption {
+    margin-top: var(--gutter-small);
+    color: var(--white-1);
+    font-size: var(--font-size-small);
+}
+
+.slideshow__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gutter-normal);
+    margin-top: var(--gutter-small);
+}
+
+.slideshow__btn {
+    background: none;
+    border: 1px solid var(--green);
+    color: var(--white);
+    font-size: 2.4rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+    line-height: 1;
+}
+
+.slideshow__btn:hover {
+    background: var(--green);
+}
+
+.slideshow__counter {
+    font-family: 'Jost', sans-serif;
+    color: var(--white-1);
+    font-size: var(--font-size-small);
+    min-width: 5rem;
+    text-align: center;
 }
 
 /* --------------------------------------- */

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/foggy_landscape.JPG" />
+  <title>Work — Julia Wine</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <header class="header header--short" role="banner">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="work.html" class="nav__link nav__link--active">Work</a></li>
+          <li class="nav__item"><a href="cv.html" class="nav__link">CV</a></li>
+          <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="page-main">
+    <section class="work-section">
+      <div class="row">
+        <h2>My Work</h2>
+
+        <!-- Tab buttons -->
+        <div class="tabs" role="tablist">
+          <button class="tab tab--active" role="tab" aria-selected="true"  aria-controls="panel-scicomm"  id="tab-scicomm">Science Communication</button>
+          <button class="tab"             role="tab" aria-selected="false" aria-controls="panel-artwork"  id="tab-artwork">Artwork</button>
+          <button class="tab"             role="tab" aria-selected="false" aria-controls="panel-fieldwork" id="tab-fieldwork">Field Work &amp; Research</button>
+        </div>
+
+        <!-- Science Communication panel -->
+        <div class="tab-panel" id="panel-scicomm" role="tabpanel" aria-labelledby="tab-scicomm">
+          <p class="work-section__intro">
+            Sharing fire ecology and land stewardship stories with broader audiences through
+            social media, illustration, and public outreach.
+          </p>
+          <!--
+            INSTRUCTIONS: Add your science communication images below.
+            Copy a .gallery__thumb block for each image.
+            Set data-full to your image path, data-caption to a short description.
+          -->
+          <div class="gallery">
+            <div class="gallery__thumb" data-full="./images/project-1.png" data-caption="Coast redwood fire adaptations — social media post">
+              <img src="./images/project-1.png" alt="Coast redwood fire adaptations post" />
+              <div class="gallery__overlay">View</div>
+            </div>
+            <!-- Add more images here:
+            <div class="gallery__thumb" data-full="./images/scicomm-2.jpg" data-caption="Your caption">
+              <img src="./images/scicomm-2.jpg" alt="Description" />
+              <div class="gallery__overlay">View</div>
+            </div>
+            -->
+          </div>
+        </div>
+
+        <!-- Artwork panel -->
+        <div class="tab-panel tab-panel--hidden" id="panel-artwork" role="tabpanel" aria-labelledby="tab-artwork">
+          <p class="work-section__intro">
+            Linocut printmaking, collage, and illustration exploring nostalgia and the natural world.
+          </p>
+          <!--
+            INSTRUCTIONS: Replace placeholder paths with your actual artwork filenames.
+            Add or remove .gallery__thumb blocks as needed.
+          -->
+          <div class="gallery">
+            <div class="gallery__thumb" data-full="./images/art-1.jpg" data-caption="Linocut print — [your title here]">
+              <img src="./images/art-1.jpg" alt="Linocut print" />
+              <div class="gallery__overlay">View</div>
+            </div>
+            <div class="gallery__thumb" data-full="./images/art-2.jpg" data-caption="Collage — [your title here]">
+              <img src="./images/art-2.jpg" alt="Collage" />
+              <div class="gallery__overlay">View</div>
+            </div>
+            <div class="gallery__thumb" data-full="./images/art-3.jpg" data-caption="Illustration — [your title here]">
+              <img src="./images/art-3.jpg" alt="Illustration" />
+              <div class="gallery__overlay">View</div>
+            </div>
+            <!-- Add more images here -->
+          </div>
+        </div>
+
+        <!-- Field Work & Research panel -->
+        <div class="tab-panel tab-panel--hidden" id="panel-fieldwork" role="tabpanel" aria-labelledby="tab-fieldwork">
+          <p class="work-section__intro">
+            Fuels monitoring, prescribed fire, and ecological research in the field.
+          </p>
+          <!--
+            INSTRUCTIONS: Add your field/research images the same way as above.
+          -->
+          <div class="gallery">
+            <div class="gallery__thumb" data-full="./images/field-1.jpg" data-caption="[Caption for your field photo]">
+              <img src="./images/field-1.jpg" alt="Field work photo" />
+              <div class="gallery__overlay">View</div>
+            </div>
+            <!-- Add more images here -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" id="lightbox-prev" aria-label="Previous image">&#8592;</button>
+    <button class="lightbox__next" id="lightbox-next" aria-label="Next image">&#8594;</button>
+    <div class="lightbox__content">
+      <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+      <p class="lightbox__caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://github.com/juliawine93" title="GitHub Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/juliawine" title="LinkedIn Profile">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+      <p>&copy; 2025 Julia Wine &mdash; Template by <a href="https://nisar.dev" class="link">Nisar</a>.</p>
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+  <script src="./gallery.js"></script>
+</body>
+</html>

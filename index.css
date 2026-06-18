@@ -321,7 +321,7 @@ body:not(.user-is-tabbing) a:focus {
     transition: all .2s;
     border: 1px solid var(--green);
     border-radius: 4px;
-    background: rgba(4, 138, 4, 0.25);
+    background: rgba(4, 138, 4, 0.8);
 }
 
 .nav__link::after {

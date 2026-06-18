@@ -86,10 +86,9 @@
     showImage(currentIndex);
   }
 
-  // Attach click handlers to all gallery thumbnails
 // Attach click handlers to all gallery thumbnails
   document.querySelectorAll('.gallery').forEach(function (gallery) {
-    const thumbs = Array.from(gallery.querySelectorAll('.gallery__thumb'));
+    const thumbs = Array.from(gallery.querySelectorAll('.gallery__thumb:not(.gallery__thumb--link)'));
     thumbs.forEach(function (thumb, i) {
       thumb.addEventListener('click', function () {
         const full = thumb.dataset.full || '';

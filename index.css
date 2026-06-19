@@ -340,6 +340,44 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
+/* ----- Page Banner (inner pages) ----- */
+/* --------------------------------------- */
+
+.page-banner {
+    height: 28rem;
+    background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .5)),
+        url('./images/foggy_landscape.JPG');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    border-bottom: var(--border-light);
+}
+
+.page-banner__text {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 2rem 4rem;
+}
+
+.page-banner__text h1 {
+    font-size: var(--font-size-large);
+    margin: 0;
+    color: var(--white);
+}
+
+@media(max-width: 600px) {
+    .page-banner {
+        height: 20rem;
+    }
+    .page-banner__text {
+        padding: 1.5rem 2.5rem;
+    }
+    .page-banner__text h1 {
+        font-size: var(--font-size-medium-1);
+    }
+}
+
+/* --------------------------------------- */
 /* ----- Navigation ----- */
 /* --------------------------------------- */
 

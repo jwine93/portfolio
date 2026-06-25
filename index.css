@@ -218,7 +218,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .btn--green:hover,
 .btn--green:focus {
-    background: transparent;
+    background: var(--green);
 }
 
 .link__text {
